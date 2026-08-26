@@ -1,109 +1,109 @@
-# AI Job Analyst - CV & Job Description Analysis
+# AI Job Analyst - CV and Job Description Matching System
+
+An intelligent CV and Job Description analysis system that extracts candidate information, evaluates job fit, identifies skill gaps, and provides an interactive chatbot for explaining the results.
 
 ## Project Overview
 
-The **AI Job Analyst** is a Python-based NLP project that analyzes a candidate's CV and extracts structured information such as skills, experience, education, projects, and other relevant career details.
+The AI Job Analyst is a Python-based NLP and rule-based job matching system designed to automate the initial screening and analysis of a candidate against a Job Description (JD).
 
-The project also supports job-description analysis and can be used as a foundation for building an intelligent **CV-Job Description matching system**.
+The project evolved from a basic CV analyzer (V1) into an interactive CV-JD analysis chatbot (V2).
 
-## Objective
+The system analyzes:
 
-The objective of this project is to automate the initial analysis of resumes and job descriptions using Python and Natural Language Processing (NLP) techniques.
+- Candidate skills
+- Education
+- Work experience
+- Projects
+- Job requirements
+- Required and preferred skills
+- Responsibility-level evidence
+- Experience gaps
+- Overall job-fit score
 
-The system helps transform unstructured CV information into structured candidate insights that can be used for:
+## Project Evolution
 
-* Candidate profiling
-* Skill extraction
-* Job requirement analysis
-* CV-Job matching
-* Recruitment support
-* Career guidance
+### V1 - CV Analyzer
 
-## Key Features
+The first version focused on extracting and analyzing information from a candidate's CV.
 
-* PDF/CV text extraction
-* CV section identification
-* Professional summary extraction
-* Work experience extraction
-* Education extraction
-* Project extraction
-* Technical skill extraction
-* Skill normalization and aliases
-* NLP-based information extraction
-* Job requirement analysis
-* Structured candidate profiling
+### V1 Features
 
-## Technologies Used
+- CV PDF text extraction
+- Resume section identification
+- Skill extraction
+- Education extraction
+- Experience extraction
+- Basic CV-JD matching
+- Project extraction
+- Structured candidate profiling
+- Overall match scoring
 
-* Python
-* Pandas
-* NumPy
-* Regular Expressions (Regex)
-* Natural Language Processing (NLP)
-* Jupyter Notebook
-* Google Colab
+### V1 Notebook
 
-## Project Structure
+`AI_Job_Analyst_Basic_.ipynb`
 
-```text
-kaushalsetu/
-|
-├── AI_Job_Analyst_Basic_GitHub_Ready.ipynb
-└── README.md
-```
+## V2 - Interactive AI Job Analyst Chatbot
 
-## Workflow
+V2 extends the original CV analyzer into an interactive job-analysis system.
 
-```text
-CV / Resume
-     |
+The user can upload a CV, paste a Job Description, analyze the candidate's fit, and ask questions about the results through a chatbot interface.
+
+### V2 Features
+
+- CV PDF upload
+- Job Description input
+- Automated CV-JD analysis
+- Skill matching
+- Match scoring
+- Education matching
+- Experience matching
+- Skill-gap identification
+- Evidence-based analysis
+- Interactive chatbot
+- Gradio user interface
+- Overall job-fit assessment
+
+### Example Chatbot Questions
+
+The chatbot can answer questions such as:
+
+- Am I a good fit?
+- What are my strengths?
+- What are my skill gaps?
+- How much experience do I have?
+- What is my match score?
+- Should I apply for this role?
+
+### V2 Notebook
+
+AI_Job_Analyst_V2_Chatbot.ipynb
+
+## System Workflow
+
+Candidate CV PDF
+       |
+       v
 Text Extraction
-     |
-CV Section Detection
-     |
-Information Extraction
-     |
-Skill Detection and Normalization
-     |
-Structured Candidate Profile
-     |
+       |
+       v
+Candidate Profile
+       |
+       v
 Job Description Analysis
-     |
-CV-Job Matching
-```
-
-## Example Output
-
-The system can identify skills from a CV, including examples such as:
-
-* Python
-* SQL
-* Pandas
-* NumPy
-* Machine Learning
-* NLP
-* Regression
-* Random Forest
-* Power BI
-* Excel
-* Data Analysis
-* Data Visualization
-* Statistical Modeling
-
-## Future Improvements
-
-Planned improvements include:
-
-* Automated CV-Job Description match scoring
-* Semantic similarity using transformer models
-* Evidence-based skill matching
-* Interactive Gradio interface
-* AI-powered career recommendations
-* Job-specific skill gap analysis
-* Integration with the **KaushalSetu** career navigation platform
-
-## Author
-
-**Om Paduskar**
-
-This project is part of my portfolio focused on **Data Science, Machine Learning, NLP, and AI-based career applications**.
+       |
+       v
+Skill Matching
+       |
+       +------------------+------------------+
+       |                  |                  |
+       v                  v                  v
+Education            Experience       Responsibilities
+Matching              Matching             Evidence
+       |                  |                  |
+       +------------------+------------------+
+                          |
+                          v
+                   Overall Match Score
+                          |
+                          v
+                  AI Job Analyst Chatbot
